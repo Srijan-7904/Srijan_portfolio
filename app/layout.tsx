@@ -23,7 +23,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://srijan-7904.github.io'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://SrijanDev.netlify.app'),
   title: {
     default: "Srijan Jaiswal — Full Stack Developer & DevOps Engineer",
     template: "%s | Srijan Jaiswal",
