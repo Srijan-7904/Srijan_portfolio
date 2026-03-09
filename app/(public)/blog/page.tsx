@@ -3,7 +3,7 @@ import { BlogList } from "@/components/public/blog/blog-list";
 import { BlogSidebar } from "@/components/public/blog/blog-sidebar";
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://SrijanDev.netlify.app';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://srijandev.netlify.app';
 
 export const metadata: Metadata = {
   title: "Blog",

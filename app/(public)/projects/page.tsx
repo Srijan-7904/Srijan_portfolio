@@ -1,7 +1,7 @@
 import { ProjectsPageContent } from "@/components/public/projects/projects-page-content";
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://SrijanDev.netlify.app';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://srijandev.netlify.app';
 
 export const metadata: Metadata = {
   title: "Projects",

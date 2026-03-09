@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://SrijanDev.netlify.app'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://srijandev.netlify.app'
 
   // Static routes
   const staticRoutes = [

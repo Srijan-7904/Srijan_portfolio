@@ -3,7 +3,7 @@
   publish = ".next"
 
 [build.environment]
-  NEXT_PUBLIC_SITE_URL = "https://SrijanDev.netlify.app"
+  NEXT_PUBLIC_SITE_URL = "https://srijandev.netlify.app"
   NPM_FLAGS = "--legacy-peer-deps"
 
 [[plugins]]
