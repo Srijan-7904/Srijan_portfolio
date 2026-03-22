@@ -7,18 +7,28 @@ const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/srijanjaiswal7904", handle: "@srijanjaiswal7904", icon: Instagram },
 ]
 
+const quickLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Resume", href: "#resume" },
+  { label: "Contact", href: "#contact" },
+]
+
 export function Footer() {
   return (
-    <footer id="connect" className="border-t border-border/30 px-4 sm:px-6 py-20 sm:py-28">
+    <footer className="border-t border-border/30 px-4 sm:px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 sm:gap-16 lg:grid-cols-2">
+        <div className="grid gap-12 sm:gap-16 lg:grid-cols-3">
           {/* Left column */}
           <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
             <div className="space-y-3">
               <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">Connect</p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-balance">
                 {"Let's build something "}
-                <span className="bg-gradient-to-l from-primary/50 to-accent text-transparent bg-clip-text ">together</span>
+                <span className="bg-linear-to-l from-primary/50 to-accent text-transparent bg-clip-text ">together</span>
               </h2>
             </div>
             <p className="max-w-md text-base sm:text-lg text-muted-foreground leading-relaxed">
@@ -38,10 +48,30 @@ export function Footer() {
                 <span className="absolute inset-0 -translate-x-full bg-primary transition-transform duration-500 group-hover:translate-x-0" />
               </a>
             </div>
+
+          </div>
+
+          {/* Middle column - Quick links */}
+          <div className="space-y-6 animate-fade-in-up stagger-2">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-muted-foreground">
+              Quick Links
+            </p>
+            <div className="grid grid-cols-2 gap-2 sm:max-w-sm">
+              {quickLinks.map((link, index) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="rounded-lg border border-transparent px-3 py-2 font-mono text-xs uppercase tracking-wider text-muted-foreground transition-all duration-300 hover:border-border/50 hover:bg-card/50 hover:text-foreground"
+                  style={{ animationDelay: `${index * 80 + 300}ms` }}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Right column - Links */}
-          <div className="space-y-6 lg:text-right animate-fade-in-up stagger-2">
+          <div className="space-y-6 lg:text-right animate-fade-in-up stagger-3">
             <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-muted-foreground">
               Find me elsewhere
             </p>

@@ -3,6 +3,8 @@ import { HeroSection } from "@/components/hero-section"
 import { ProjectsGrid } from "@/components/projects-grid"
 import { LabNotes } from "@/components/lab-notes"
 import { Workbench } from "@/components/workbench"
+import { ProfileSections } from "@/components/profile-sections"
+import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { CursorGlow } from "@/components/cursor-glow"
 import { generateWebsiteStructuredData, generatePersonStructuredData } from "@/lib/structured-data"
@@ -30,6 +32,8 @@ export default function Home() {
           <ProjectsGrid />
           <LabNotes />
           <Workbench />
+          <ProfileSections />
+          <ContactSection />
           <Footer />
         </div>
       </main>

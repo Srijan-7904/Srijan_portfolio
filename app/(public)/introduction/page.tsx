@@ -146,7 +146,7 @@ export default function IntroductionPage() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               What I&apos;ve Achieved
             </h2>
-            <p className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground">
+            <p className="mx-auto max-w-2xl text-sm sm:text-base leading-relaxed text-muted-foreground">
               A snapshot of the work, competitions, and contributions that have shaped my journey as a fresher developer.
             </p>
           </div>
@@ -161,11 +161,11 @@ export default function IntroductionPage() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="rounded border border-border/50 bg-card/50 p-5 text-center backdrop-blur-sm"
+                className="rounded border border-border/50 bg-card/50 p-5 text-center backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card/80"
               >
-                <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                <div className="mt-1 text-sm font-medium text-foreground">{stat.label}</div>
-                <div className="text-xs text-muted-foreground">{stat.sub}</div>
+                <div className="text-3xl font-bold tracking-tight text-primary">{stat.value}</div>
+                <div className="mt-1 font-mono text-xs font-semibold uppercase tracking-wider text-foreground">{stat.label}</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">{stat.sub}</div>
               </div>
             ))}
           </div>
@@ -175,83 +175,55 @@ export default function IntroductionPage() {
             {[
               {
                 icon: Trophy,
-                color: "from-yellow-500/20 to-orange-500/20",
-                border: "border-yellow-500/30 group-hover:border-yellow-500",
-                iconColor: "text-yellow-500",
-                iconBg: "bg-yellow-500/10 border-yellow-500/30 group-hover:bg-yellow-500 group-hover:border-yellow-500",
-                badge: "🏆 National Level",
-                title: "Smart India Hackathon — SIH Finale",
-                desc: "Qualified for the SIH finale with an AI-powered Smart Farming System that integrates IoT, computer vision, and a real-time web dashboard for crop disease detection and precision pesticide spraying.",
+                badge: "National Level",
+                title: "SIH Finale — Smart India Hackathon",
+                desc: "Qualified for the SIH finale with an AI-powered Smart Farming System integrating IoT, computer vision, and a real-time web dashboard for crop disease detection.",
               },
               {
                 icon: Award,
-                color: "from-purple-500/20 to-pink-500/20",
-                border: "border-purple-500/30 group-hover:border-purple-500",
-                iconColor: "text-purple-500",
-                iconBg: "bg-purple-500/10 border-purple-500/30 group-hover:bg-purple-500 group-hover:border-purple-500",
-                badge: "🥇 University Level",
+                badge: "Zonal Level",
                 title: "AIU Anveshan 2025 — Finalist",
-                desc: "Competed at AIU Anveshan 2025 presenting the Smart Farming System. Recognized for innovation in AgriTech, combining intelligent rover navigation with AI-driven disease diagnostics.",
+                desc: "Competed at AIU Anveshan 2025 presenting the Smart Farming System. Recognized for innovation in AgriTech and AI-driven disease diagnostics.",
               },
               {
                 icon: Users,
-                color: "from-blue-500/20 to-cyan-500/20",
-                border: "border-blue-500/30 group-hover:border-blue-500",
-                iconColor: "text-blue-500",
-                iconBg: "bg-blue-500/10 border-blue-500/30 group-hover:bg-blue-500 group-hover:border-blue-500",
-                badge: "👑 Leadership Role",
+                badge: "Leadership Role",
                 title: "Tech Lead — Club 20 LPU",
-                desc: "Promoted to Tech Lead at Club 20 LPU after serving as a member. Lead the club's entire web infrastructure, manage a technical team, and drive digital initiatives for 100+ club members.",
+                desc: "Promoted to Tech Lead at Club 20 LPU. Lead the club's web infrastructure, manage a technical team, and drive digital initiatives for 100+ members.",
               },
               {
                 icon: Brain,
-                color: "from-green-500/20 to-teal-500/20",
-                border: "border-green-500/30 group-hover:border-green-500",
-                iconColor: "text-green-500",
-                iconBg: "bg-green-500/10 border-green-500/30 group-hover:bg-green-500 group-hover:border-green-500",
-                badge: "🧠 AI / ML",
+                badge: "AI / ML",
                 title: "Brain Tumor Detection — 99.2% Accuracy",
-                desc: "Built a deep learning model using VGG16, TensorFlow and Keras to detect brain tumors from MRI scans with 99.2% accuracy. Served via a Flask API with a React frontend.",
+                desc: "Built a deep learning model using VGG16, TensorFlow and Keras to detect brain tumors from MRI scans. Served via Flask API with a React frontend.",
               },
               {
                 icon: Rocket,
-                color: "from-orange-500/20 to-red-500/20",
-                border: "border-orange-500/30 group-hover:border-orange-500",
-                iconColor: "text-orange-500",
-                iconBg: "bg-orange-500/10 border-orange-500/30 group-hover:bg-orange-500 group-hover:border-orange-500",
-                badge: "🚀 Full Stack",
+                badge: "Full Stack",
                 title: "9 Live Deployed Projects",
-                desc: "Shipped 9 production projects including DecisionHub, Trackify, Podstream, Vexa, and the Smart Farming System — across web apps, ML apps, and Figma designs. All live and accessible.",
+                desc: "Shipped 9 production projects including DecisionHub, Trackify, Podstream, Vexa, and Smart Farming System — across web apps, ML apps, and Figma designs.",
               },
               {
                 icon: Star,
-                color: "from-indigo-500/20 to-violet-500/20",
-                border: "border-indigo-500/30 group-hover:border-indigo-500",
-                iconColor: "text-indigo-400",
-                iconBg: "bg-indigo-500/10 border-indigo-500/30 group-hover:bg-indigo-500 group-hover:border-indigo-500",
-                badge: "⭐ Academic",
+                badge: "Academic",
                 title: "8.7 CGPA — Lovely Professional University",
-                desc: "Maintaining 8.7 CGPA across 4 semesters of B.Tech Computer Science & Engineering at LPU, while simultaneously leading Club 20, building projects, and competing in hackathons.",
+                desc: "Maintaining 8.7 CGPA across 4 semesters of B.Tech CSE at LPU while leading Club 20, building projects, and competing in hackathons.",
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded border ${item.border} bg-gradient-to-br ${item.color} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
+                className="group rounded border border-border/50 bg-card/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card/80"
               >
-                <div className="mb-4 flex items-center gap-3">
-                  <div
-                    className={`flex h-11 w-11 items-center justify-center rounded border ${item.iconBg} transition-all duration-300`}
-                  >
-                    <item.icon className={`h-5 w-5 ${item.iconColor} group-hover:text-white transition-colors duration-300`} />
-                  </div>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-                    {item.badge}
-                  </span>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded border border-primary/30 bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
+                  <item.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mb-2 text-sm font-semibold leading-tight text-foreground">
+                <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.15em] text-primary">
+                  {item.badge}
+                </p>
+                <h3 className="mb-2 font-mono text-sm font-semibold uppercase tracking-wider text-foreground">
                   {item.title}
                 </h3>
-                <p className="text-xs leading-relaxed text-muted-foreground">
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {item.desc}
                 </p>
               </div>

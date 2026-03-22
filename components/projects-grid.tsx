@@ -140,7 +140,7 @@ export function ProjectsGrid() {
   const filteredProjects = activeFilter === "all" ? projects : projects.filter((p) => p.status === activeFilter)
 
   return (
-    <section id="projects" className="px-4 sm:px-6 py-20 sm:py-28">
+    <section id="projects" className="scroll-mt-28 px-4 sm:px-6 py-20 sm:py-28 animate-section-enter">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 sm:mb-14 flex flex-col gap-6 sm:gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3 animate-fade-in-up">
@@ -173,7 +173,7 @@ export function ProjectsGrid() {
               className={cn(
                 "group relative overflow-hidden rounded-xl border bg-card/40 p-6 sm:p-7 glass transition-all duration-400 active:scale-[0.99] hover-lift hover:border-primary/40 hover:bg-card/70 animate-fade-in-up",
                 "highlight" in project && project.highlight
-                  ? "sm:col-span-2 lg:col-span-2 border-primary/30 bg-gradient-to-br from-primary/8 via-card/50 to-primary/8"
+                  ? "sm:col-span-2 lg:col-span-2 border-primary/30 bg-linear-to-br from-primary/8 via-card/50 to-primary/8"
                   : "border-border/60",
                 project.featured && !("highlight" in project && project.highlight) && "sm:col-span-2 lg:col-span-1",
               )}
@@ -280,7 +280,7 @@ export function ProjectsGrid() {
                 )}
               </div>
 
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-primary/80 to-transparent transition-all duration-500 group-hover:w-full" />
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-primary via-primary/80 to-transparent transition-all duration-500 group-hover:w-full" />
             </article>
           ))}
         </div>
